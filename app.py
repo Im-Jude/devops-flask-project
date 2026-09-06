@@ -13,7 +13,7 @@ app_host = getenv('APP_HOST', '0.0.0.0')
 app_port = int(getenv('APP_PORT', 5000))
 redis_host = getenv('REDIS_HOST', '127.0.0.1')
 redis_port = int(getenv('REDIS_PORT', 6379))
-connection_string = getenv('DATABASE_URI', 'sqlite:////tmp/test.db')
+connection_string = getenv('DATABASE_URL', 'sqlite:////tmp/test.db')
 
 print('Conecting to DB', connection_string)
 app.config['SQLALCHEMY_DATABASE_URI'] = connection_string
