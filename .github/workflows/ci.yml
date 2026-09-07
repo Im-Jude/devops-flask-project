@@ -41,8 +41,8 @@ jobs:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
           docker build \
-            -t "${DOCKERHUB_USERNAME}/flask-devops-app:latest" \
-            -t "${DOCKERHUB_USERNAME}/flask-devops-app:${{ github.sha }}" .
+            -t "$DOCKERHUB_USERNAME/flask-devops-app:latest" \
+            -t "$DOCKERHUB_USERNAME/flask-devops-app:${{ github.sha }}" .
 
       - name: Push Docker image
         env:
